@@ -2035,7 +2035,7 @@ ul.vertical-images li:hover .bg {
 }
 
 ul.vertical-images li .overlay1 {
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     display: block;
     position: absolute!important;
     top: 0;
@@ -2253,7 +2253,7 @@ ul.vertical-images li:hover .button {
     right: 0;
 }
 
-@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+@media screen and (min-width:0\0) and (min-resolution:72dpi) {
     /* IE9+ CSS*/
     .content-head:after,
     .content-head:before {
@@ -4076,9 +4076,9 @@ ul.vertical-images li:hover .button {
     color: #fff;
 }
 
-.folio-full .folio-item {
+ /* .folio-item {
     width: 25%;
-}
+} */
 
 
 /* -----------------------------------------------------------------------------CLINETS ------------------ */
@@ -4762,7 +4762,7 @@ a#playVid i {
     padding: 0 15px 30px;
 }
 
-.portfolio-full-3col .folio-item {
+.port-3col .folio-item {
     width: 33.3333%;
 }
 
@@ -5956,7 +5956,7 @@ h4.widget-title:after {
     font-family: 'Varela Round', sans-serif;
     -webkit-transition: color 0.3s ease-in;
     -moz-transition: color 0.3s ease-in;
-    xآ²-o-transition: color 0.3s ease-in;
+    -o-transition: color 0.3s ease-in;
     transition: color 0.3s ease-in;
 }
 
@@ -7703,7 +7703,7 @@ footer {
     font-style: italic;
 }
 
-.footer-widget {}
+
 
 .footer-widget h5 {
     font-family: Lato;

@@ -606,10 +606,10 @@
 
 
     <div class="container brandLogos" style="display: flex; overflow: scroll; margin-top: 3rem;">
-       <div style="display: flex; align-items: center;justify-content: center; margin-left: 3rem;"><img src="images/brandLogo1.jpg" alt=""></div> 
-       <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img src="images/brandLogo2.jpg" alt=""></div> 
-       <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img src="images/brandLogo3.jpg" alt=""></div> 
-       <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img src="images/brandLogo4.jpg" alt=""></div> 
+       <div style="display: flex; align-items: center;justify-content: center; margin-left: 3rem;"><img class="brandImage" src="images/brandLogo1.jpg" alt=""></div> 
+       <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img class="brandImage" src="images/brandLogo2.jpg" alt=""></div> 
+       <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img class="brandImage" src="images/brandLogo3.jpg" alt=""></div> 
+       <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img class="brandImage" src="images/brandLogo4.jpg" alt=""></div> 
     </div>
 
 
@@ -1120,6 +1120,11 @@ overlay div end
             .indflexLogo{
             width: 9rem;
         }
+        }
+        @media (max-width:550px) {
+            .brandImage{
+                width: 13rem;
+            }
         }
 
 
