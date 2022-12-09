@@ -2318,6 +2318,9 @@ ul.vertical-images li:hover .button {
 }
 
 @media only screen and (max-width: 500px) {
+.services{
+    margin-top: 1rem !important;
+}
     .darnalargetext {
         font-size: 150%!important;
         line-height: 100%!important;
@@ -2325,7 +2328,7 @@ ul.vertical-images li:hover .button {
     .tp-caption.darnasmalltext,
     .darnasmalltext {
         font-weight: 400!important;
-        font-size: 60%!important;
+        font-size: 70%!important;
         line-height: 16px!important;
     }
     .tp-caption.darnaverylargetextprimary,
@@ -2342,7 +2345,7 @@ ul.vertical-images li:hover .button {
     }
     .darnamediumtext {
         font-weight: 400!important;
-        font-size: 60%!important;
+        font-size: 70%!important;
         line-height: 16px!important;
     }
     .tp-caption.darnalargeprimarybg,
