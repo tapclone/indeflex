@@ -63,8 +63,26 @@
             .indflexLogo{
             width: 9rem;
         }
+
         
         }
+
+    .HOSSES, .TRELLEBORG, .COUPLINGS-ADAPTERS, .CONVEYOR-BELT{
+        transition: all 0.2s linear;
+    }
+    .project-overlay{
+        background-color: #FFB600;
+    }
+    .project-overlay h4,a:hover{
+        color: white !important;
+    }
+    .project-overlay h4,a:hover +  .project-overlay span{
+        color: black;
+    }
+    .project-overlay span{
+        color: white;
+        font-weight: 600;
+    }
 </style>
 
 <body>
@@ -285,7 +303,331 @@
             </ul>
         </div>
     </div>
-    <div class="home-projects-full home-projects-full-filter portfolio-wrap-main ">
+
+    <div class="container" style="margin-top: 5rem; text-align: center;" >
+        <button style="margin-left: 5%; margin-top: 2%; padding: 1rem; background-color: rgb(233, 233, 88); color: black; font-size: 1.2rem; font-weight: 600; outline: none; border: none; border-radius: 10px;"  onclick="showHose()">HOSES</button>
+        <button style="margin-left: 5%; margin-top: 2%; padding: 1rem; background-color: rgb(218, 114, 69); color: black; font-size: 1.2rem; font-weight: 600; outline: none; border: none; border-radius: 10px;" onclick="showTrelleborg()">TRELLEBORG</button>
+        <button style="margin-left: 5%; margin-top: 2%; padding: 1rem; background-color: rgb(86, 223, 175); color: black; font-size: 1.2rem; font-weight: 600; outline: none; border: none; border-radius: 10px;" onclick="showcouplingAndAdapters()">COUPLINGS & ADAPTERS</button>
+        <button style="margin-left: 5%; margin-top: 2%; padding: 1rem; background-color: rgb(69, 134, 181); color: black; font-size: 1.2rem; font-weight: 600; outline: none; border: none; border-radius: 10px;" onclick="showConveyorBelts()">CONVEYOR BELTS</button>
+    </div>
+
+
+
+    <script>
+
+        function showHose(){
+
+            document.querySelector('.HOSES').style.opacity='1'
+            document.querySelector('.TRELLEBORG').style.opacity='0'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.opacity='0'
+            document.querySelector('.CONVEYOR-BELT').style.opacity='0'
+
+            setTimeout(()=>{
+            document.querySelector('.HOSES').style.display='block'
+            document.querySelector('.TRELLEBORG').style.display='none'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.display='none'
+            document.querySelector('.CONVEYOR-BELT').style.display='none'
+            },200)
+           
+        }
+
+        function showTrelleborg(){
+            document.querySelector('.HOSES').style.opacity='0'
+            document.querySelector('.TRELLEBORG').style.opacity='1'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.opacity='0'
+            document.querySelector('.CONVEYOR-BELT').style.opacity='0'
+
+            setTimeout(()=>{
+            document.querySelector('.HOSES').style.display='none'
+            document.querySelector('.TRELLEBORG').style.display='block'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.display='none'
+            document.querySelector('.CONVEYOR-BELT').style.display='none'
+            },200)
+            
+        }
+
+        function showcouplingAndAdapters(){
+            document.querySelector('.HOSES').style.opacity='0'
+            document.querySelector('.TRELLEBORG').style.opacity='0'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.opacity='1'
+            document.querySelector('.CONVEYOR-BELT').style.opacity='0'
+
+            setTimeout(()=>{
+            document.querySelector('.HOSES').style.display='none'
+            document.querySelector('.TRELLEBORG').style.display='none'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.display='block'
+            document.querySelector('.CONVEYOR-BELT').style.display='none'
+            },200)
+            
+        }
+
+        function showConveyorBelts(){
+            document.querySelector('.HOSES').style.opacity='0'
+            document.querySelector('.TRELLEBORG').style.opacity='0'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.opacity='0'
+            document.querySelector('.CONVEYOR-BELT').style.opacity='1'
+
+            setTimeout(()=>{
+            document.querySelector('.HOSES').style.display='none'
+            document.querySelector('.TRELLEBORG').style.display='none'
+            document.querySelector('.COUPLINGS-ADAPTERS').style.display='none'
+            document.querySelector('.CONVEYOR-BELT').style.display='block'
+            },20)
+
+            
+        }
+        
+    </script>
+
+    <div class="container" style="padding-bottom: 3rem;">
+
+        <div class="row HOSES"  style="margin-top: 5rem;">
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/hydraulic-changed 1.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="hydraulic-hose-pipes.html">HYDRAULIC HOSES</a></h4> <span class="project-cat">HOSES</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/industrial-hose-pipes1-changed..gif.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="industrial-hose-pipes.html">INDUSTRIAL HOSE PIPES</a></h4> <span class="project-cat">HOSES</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/ptfe-hose-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="ptfe-hose-pipes.html">PTFE HOSE PIPES</a></h4> <span class="project-cat">HOSES</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/stainless-steel-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="stainless-steel-hose.html">STAINLESS STEEL BELOW HOSE PIPES</a></h4> <span class="project-cat">HOSES</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/pvc-braided1-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="pvc-braided-hose.html">PVC BRAIDED HOSE</a></h4> <span class="project-cat">HOSES</span> 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/water-jet1-changed..png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="water-jet-horse.html">WATER JET HOSE</a></h4> <span class="project-cat">HOSE</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/ac-refrigerant1-changed..png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="air-conditioning-refregerent.html">AIR CONDITIONING REFRIGERANT HOSE</a></h4> <span class="project-cat">HOSE</span> 
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row TRELLEBORG" style="margin-top: 5rem; display: none;">
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/Food-Grade-Hose1-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="Food-Grade-Hose.html">FOOD GRADE HOSE</a></h4> <span class="project-cat">TRELLEBORG</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/construction-hose-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="construction-hose.html">CONSTRUCTION HOSE</a></h4> <span class="project-cat">TRELLEBORG</span> 
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/chemical-hose1-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="chemical-hose.html">CHEMICAL HOSE</a></h4> <span class="project-cat">TRELLEBORG</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/oil-seals-changed.jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="oil&petroleum-hose.html">OIL & PETROLEUM HOSE</a></h4> <span class="project-cat">CONVEYOR BELTS</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row COUPLINGS-ADAPTERS"  style="margin-top: 5rem; display: none;">
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/spiral-fitting1-changed.jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="spiral-fitting.html">SPIRAL FITTINGS</a></h4> <span class="project-cat">COUPLINGS & ADAPTERS</span> 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/MEGACRIMP.jpg" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="megacrimp-couplings.html">MEGACRIMP COUPLINGS</a></h4> <span class="project-cat">COUPLINGS & ADAPTERS</span> 
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/couplings&adapters-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="couplings & adapters.html">COUPLINGS AND ADAPTERS</a></h4> <span class="project-cat">COUPLINGS & ADAPTERS</span> 
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/quick-release-couplings-changed.jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="quick-release-couplings.html">QUICK RELEASE COUPLINGS</a></h4> <span class="project-cat">COUPLINGS & ADAPTERS</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/toggle-clamps-changed..png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="toggle-clamps.html">TOGGLE CLAMPS</a></h4> <span class="project-cat">COUPLINGS & ADAPTERS</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/oil-seals-changed.jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="oil-seals.html">OIL SEALS AND COUPLINGS</a></h4> <span class="project-cat">COUPLINGS & ADAPTERS</span> 
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/crimping1-changed.png" class="img-responsive" alt="" />
+                        <div class="project-overlay">
+                            <h4><a href="crimping-machine.html">CRIMPING MACHINE</a></h4> <span class="project-cat">COUPLINGS & ADAPTERS</span> 
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row CONVEYOR-BELT" style="margin-top: 5rem; display: none;">
+
+            <div class=" col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/PVC-Conveyor-Belt-450x315-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay" style="background-color: #FFB600;">
+                            <h4><a href="pvc-braided-hose.html">PVC CONVEYOR BELTS</a></h4> <span class="project-cat">CONVEYOR BELTS</span> 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="margin-top: 1rem;">
+                <div class="folio-item contruction">
+                    <div class="project-item"> <img src="images/Timing-Belts-450x315-changed..jpg.png" class="img-responsive" alt="" />
+                        <div class="project-overlay" style="background-color: #FFB600;">
+                            <h4><a href="conveyor-belt.html">TIMING BELTS</a></h4> <span class="project-cat">CONVEYOR BELTS</span> 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+            
+       
+    </div>
+
+    <!-- <div class="home-projects-full home-projects-full-filter portfolio-wrap-main "> -->
+
 
         <!-- <div class="container no-padding">
             <div class="">
@@ -646,7 +988,7 @@
 
 
         
-    </div>
+    <!-- </div> -->
     <footer class="overlay-wrap" style="padding: 0px 25px 0; background: url(images/indus-trade-footer.jpg); background-repeat: no-repeat;background-size: cover; background-position: center center ;">
         <div class="overlay" style="background-color: black;" > </div>
         <div class="container">
@@ -714,6 +1056,11 @@
             </div>
         </div>
     </footer>
+
+    
+
+
+    
 <!-- -- -- -- -
 Search popup start
 -- -- -- -- -->
