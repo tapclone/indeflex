@@ -57,6 +57,99 @@
             width: 9rem;
         }
         }
+        .logo-container::-webkit-scrollbar{
+            display: none;
+        }
+    .wrapper {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-box {
+    height: 100vh;
+    width: 80vh;
+    background: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.main-navigation {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between
+}
+
+.navigation-arrows{
+    background: none;
+    border: none;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.navigation-arrows:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#left-button {
+    left: 0;
+    text-align: start;
+}
+
+#right-button {
+    right: 0;
+        text-align: end;
+
+}
+
+article {
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article img{
+    width: 100%;
+}
+
+
+#navigation-dots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: grey;
+    
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+#active-dot {
+    color: black;
+    opacity: 100%;
+} 
+
+.dot {
+    margin: 0px 5px;
+    opacity: 70%;
+}
+
+.dot:hover {
+    cursor: pointer;
+    color: white;
+}
+
+
+
 </style>
 <body>
     <!-- -- -- - -- -- -- - -- -- -- - -- -- -- -- -
@@ -82,7 +175,7 @@
                 <div class="col-md-6 tb-left">
                     <ul class="list-inline text-uppercase">
                         <li><i class="fa fa-phone"></i>Call Us Now 0484-2366921</li>
-                        <li><i class="fa fa-envelope"></i> <a href="mailto:darna@company.com">industradelinks1996@gmail.com</a> </li>
+                        <li style="text-transform: none;"><i class="fa fa-envelope"></i> <a href="mailto:darna@company.com">industradelinks1996@gmail.com</a> </li>
                     </ul>
                 </div>
                 <!-- -- -- - -- -- -- - -- -- -- - -- -- -- -- -
@@ -365,7 +458,10 @@
 
             <div class="container" style="margin-top: 4rem;">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6" style="display: flex;align-items: center;justify-content: center;">
+                        <img style="width: 50%;min-width: 25rem;" src="certificates/iso cert_page-0001.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
                         <p style="text-align: justify;">INDUS TRADE LINKS since its’ inception, is the sole distributor and assembler for Gates
                             products in Kerala. Gates Corporation USA, founded in 1911, is the world’s leading
                             manufacturer of power transmission belts and a premier global manufacturer of power
@@ -377,6 +473,7 @@
                     </div>
                 </div>
             </div>
+            
 
             <div class="container" style="margin-top: 1.5rem;background-color: rgba(191, 8, 8, 0.9);padding: 0.5rem;">
                 <div class="row">
@@ -637,12 +734,51 @@
     </div> -->
 
 
-    <div class="container brandLogos" style="display: flex; overflow: scroll; margin-top: 3rem;">
-        <div  style="display: flex; align-items: center;justify-content: center; margin-left: 3rem; "><img class="brandImage" src="images/brandLogo1.jpg" alt=""></div> 
-        <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img class="brandImage"  src="images/brandLogo2.jpg" alt=""></div> 
-        <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img class="brandImage"  src="images/brandLogo3.jpg" alt=""></div> 
-        <div style="display: flex; align-items: center;justify-content: center;  margin-left: 3rem;"><img class="brandImage"  src="images/brandLogo4.jpg" alt=""></div> 
-     </div>
+    <div class="container logo-container" style="overflow: scroll;display: flex;padding: 2rem;">
+        <img style="width: 20rem;" src="images/flexco logo original.jpg" alt="">
+        <img style="width: 20rem;margin-left: 1rem;" src="images/gates logo original.jpg" alt="">
+        <img style="width: 20rem;margin-left: 1rem;" src="images/indo logo.PNG" alt="">
+        <img style="width: 20rem;margin-left: 1rem;" src="images/Indus Logos 2.jpg" alt="">
+        <img style="width: 20rem;margin-left: 1rem;" src="images/ammeraal logo original.jpg" alt="">
+        
+
+    </div>
+
+    <div class="wrapper">
+        <div class="carousel-box">
+            <div class="main-navigation">
+                <button id="left-button" class="navigation-arrows" onclick="changeSlide('move-left', -1)"><i class="fa-solid fa-arrow-left-long" style="font-size: 2rem;"></i></button>
+                <button id="right-button" class="navigation-arrows" onclick="changeSlide('move-right', 1)"><i class="fa-solid fa-arrow-right" style="font-size: 2rem;"></i></button>
+            </div>
+        <div id="navigation-dots">
+                <i class="fa-solid fa-circle dot" id="active-dot" onclick="changeSlide('jump-to', 0)"></i>
+            </div>
+            <article class="carousel-slide" >
+                <img src="certificates/Ammega dealership_page-0001.jpg" alt="">
+            </article>
+            <article class="carousel-slide">
+                <img src="certificates/flexco dealership_page-0001.jpg" alt="">
+            </article>
+            
+            <article class="carousel-slide" >
+                <img src="certificates/gates dealership_page-0001.jpg" alt="">
+            </article>
+            <article class="carousel-slide" >
+                <img src="certificates/FLEXCO HD_page-0001.jpg" alt="">
+            </article>
+            <article class="carousel-slide" >
+                <img src="certificates/INDO MAKSSON_page-0001.jpg" alt="">
+            </article>
+            <article class="carousel-slide">
+                <img src="certificates/TRELLEBORG DEALERSHIP_page-0001.jpg" alt="">
+            </article>
+            
+        </div>
+      
+    </div>
+    
+
+    
  
 
 
@@ -762,6 +898,82 @@ overlay div start
             }
         }
     </style>
+    <script>
+        let carousel_slides = document.getElementsByClassName("carousel-slide");
+let number_of_slides = carousel_slides.length;
+
+// global variable for keeping track of active slide
+let index = 0;
+
+// Create navigation dot for each slide in the carousel
+let _navigation_dots = document.getElementById("navigation-dots");
+let dot = document.createElement("i");
+dot.classList.add("fa-solid", "fa-circle", "dot");
+let unique_dot;
+
+//add number_of_slides-1 dots to navigation_dots
+for (let x=1; x<number_of_slides; x++) {
+    unique_dot = dot.cloneNode();
+    unique_dot.addEventListener("click", function() {changeSlide('jump-to', x)});
+    _navigation_dots.appendChild(unique_dot);
+}
+
+// gather all the dots in an HTML collection
+let navigation_dots = _navigation_dots.children;
+
+// hide all slides except the first
+for (let i=1; i<number_of_slides; i++) {
+    carousel_slides[i].style.display = "none";
+}
+
+function changeSlide(action, value) {
+    // hide previous slide
+    // deactivate previous dot
+    // set index to desired slide
+    // display current slide
+    //activate current dot
+    
+    // get slide at index and set display to flex
+    // get corresponding dot and deactivate
+    carousel_slides[index].style.display = "none";
+    navigation_dots[index].removeAttribute("id");
+    
+    // update the index based on the action specified    
+    switch (action) {
+        case "move-right": {
+            // increment index +1 if not out of range
+            if (index === number_of_slides-1) {
+                index = 0;
+            }
+            else {
+                index += 1;
+            }
+            break;
+        }
+        
+        case "move-left": {
+            // increment index -1 if not out of range
+            if (index === 0) {
+                index = number_of_slides-1;
+            }
+            else {
+                index -= 1;
+            }
+            break;
+        }
+        
+        case "jump-to": {
+            index = value;
+            break;
+        }
+    }
+            
+    // get slide at index and set display to flex
+    // get corresponding dot and set to active
+    carousel_slides[index].style.display = "flex";
+    navigation_dots[index].id = "active-dot";
+}
+    </script>
 
     <!-- -- -- -- -
 overlay div end
@@ -772,6 +984,7 @@ overlay div end
     <script src="js/jquery.js"></script>
     <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
+    
     <!-- owl-carousel -->
     <script src="js/owl.carousel.min.js"></script>
     <!-- twitter -->
@@ -792,6 +1005,7 @@ overlay div end
     <!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
     <script src="js/jquery.style.switcher.js"></script>
 <script src="js/main.js"></script>	 
+<script src="https://kit.fontawesome.com/ab0edea2e8.js" crossorigin="anonymous"></script>
 
 
 <!-- <link href="css/color.css" rel="stylesheet" id="theme-switch" ><div id="colour-variations" class="sleep"> <a class="option-toggle"><i class="fa fa fa-cog  fa-spin" aria-hidden="true"></i></a> <h3>Preset Colors</h3> <ul> <li><a data-theme="basic " href="javascript: void(0);"></a></li><li><a data-theme="red" href="javascript: void(0);"></a></li><li><a data-theme="turquoise" href="javascript: void(0);"></a></li><li><a data-theme="blue" href="javascript: void(0);"></a></li><li><a data-theme="orange" href="javascript: void(0);"></a></li><li><a data-theme="yellow" href="javascript: void(0);"></a></li><li><a data-theme="pink" href="javascript: void(0);"></a></li><li>
